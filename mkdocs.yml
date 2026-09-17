@@ -1,0 +1,46 @@
+site_name: TrimKit Documentation
+site_description: Trim sheet texturing, decal placement, and edge decals for 3ds Max and Blender.
+site_author: TrimKit
+theme:
+  name: material
+  logo: assets/trimkit-logo.png
+  favicon: assets/trimkit-favicon.png
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+
+nav:
+  - Overview: index.md
+  - Installation: installation.md
+  - Shared Interface: interface.md
+  - Trim Mode: trim-mode.md
+  - Decal Placer: decal-placer.md
+  - Edge Decal: edge-decal.md
+
+extra_css:
+  - stylesheets/trimkit.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences

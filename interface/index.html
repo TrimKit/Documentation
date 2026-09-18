@@ -1,0 +1,1136 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Trim sheet texturing, decal placement, and edge decals for 3ds Max and Blender.">
+      
+      
+        <meta name="author" content="TrimKit">
+      
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../trim-mode/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/trimkit-favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Shared Interface - TrimKit Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/trimkit.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#shared-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TrimKit Documentation" class="md-header__button md-logo" aria-label="TrimKit Documentation" data-md-component="logo">
+      
+  <img src="../assets/trimkit-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TrimKit Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Shared Interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TrimKit Documentation" class="md-nav__button md-logo" aria-label="TrimKit Documentation" data-md-component="logo">
+      
+  <img src="../assets/trimkit-logo.png" alt="logo">
+
+    </a>
+    TrimKit Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared Interface
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shared Interface
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#top-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top Bar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Top Bar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load Texture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assign Material
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clear Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lock
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trims-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trims List
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trims List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trim-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trim list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Canvas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-move-tweaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale / Move / Tweaks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scale / Move / Tweaks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u-axis-v-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U Axis / V Axis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale amount
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale pivot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move amount
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-move-v-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U Move / V Move
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotate Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate-90-rotate-90" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotate -90 / Rotate 90
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-horizontal-flip-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flip Horizontal / Flip Vertical
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trim-mode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Trim Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../decal-placer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Decal Placer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../edge-decal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Edge Decal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#top-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Top Bar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Top Bar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#load-texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load Texture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assign-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assign Material
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#save-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Save Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#load-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Load Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clear-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clear Setup
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lock
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trims-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trims List
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trims List">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trim-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trim list
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Delete
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-canvas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Canvas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scale-move-tweaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale / Move / Tweaks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scale / Move / Tweaks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u-axis-v-axis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U Axis / V Axis
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale amount
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-pivot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale pivot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scale
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#move-amount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Move amount
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u-move-v-move" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U Move / V Move
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotate Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotate-90-rotate-90" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rotate -90 / Rotate 90
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flip-horizontal-flip-vertical" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flip Horizontal / Flip Vertical
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="shared-interface">Shared Interface</h1>
+<h2 id="top-bar">Top Bar</h2>
+<h3 id="load-texture">Load Texture</h3>
+<p>Loads the trim sheet image the canvas displays and trims are drawn against. This is purely visual reference for laying out trims; it does not assign a material to anything in the scene.</p>
+<h3 id="assign-material">Assign Material</h3>
+<p>Captures whichever material is currently active in the Material Editor and stores it as this setup's Trim Material.</p>
+<p>Any decal TrimKit creates afterward is automatically assigned this material, so placed geometry shows the correct texture immediately instead of coming in with a default material.</p>
+<p>The button's label updates to show the name of the currently assigned material.</p>
+<h3 id="save-setup">Save Setup</h3>
+<p>Writes the current trims, mapping mode, loaded texture path, and assigned material name to a <code>.json</code> file.</p>
+<p>Because the file format is shared between the 3ds Max and Blender versions of TrimKit, a setup saved in one program opens correctly in the other, with trims landing in exactly the same place on the texture.</p>
+<h3 id="load-setup">Load Setup</h3>
+<p>Loads a previously saved <code>.json</code> setup file, restoring its trims, mapping mode, texture, and material assignment into the current mode.</p>
+<h3 id="clear-setup">Clear Setup</h3>
+<p>Removes all trims, the loaded texture, and the assigned material for the current mode, giving you a clean slate for starting a new trim sheet.</p>
+<h3 id="lock">Lock</h3>
+<p>A toggle that protects the current setup from accidental changes.</p>
+<p>It's available both as a padlock button next to Add/Delete in the Trims list and as a small draggable padlock icon overlaid directly on the canvas, kept in sync with each other; drag the canvas icon to move it out of the way, or click it (without dragging) to toggle Lock.</p>
+<p>While locked, trims can still be selected, but not added, deleted, moved, resized, or renamed.</p>
+<p>Loading a Setup that already has trims in it locks it automatically, and Clear Setup unlocks it again once the setup is empty.</p>
+<h2 id="trims-list">Trims List</h2>
+<h3 id="trim-list">Trim list</h3>
+<p>Shows every trim currently defined on the sheet. Double-click a name to rename it. Selecting a trim in the list also selects it on the canvas, and vice versa.</p>
+<h3 id="add">Add</h3>
+<p>Creates a new trim rectangle on the canvas, a default-sized box you can then drag and resize, and adds it to the trim list.</p>
+<h3 id="delete">Delete</h3>
+<p>Removes the currently selected trim from both the list and the canvas.</p>
+<h2 id="the-canvas">The Canvas</h2>
+<p>The canvas is where trims are actually drawn and edited, not just previewed.</p>
+<ul>
+<li><strong>Draw:</strong> click and drag on empty canvas space to draw a new trim rectangle.</li>
+<li><strong>Move:</strong> click and drag inside an existing trim to reposition it. The cursor becomes an open hand.</li>
+<li><strong>Resize:</strong> hover over a trim's edge or corner until the cursor changes to a resize arrow, then drag to resize from that side or corner.</li>
+</ul>
+<p>The canvas works even before a texture is loaded, showing a plain placeholder square so trims can still be laid out and saved ahead of time.</p>
+<h2 id="scale-move-tweaks">Scale / Move / Tweaks</h2>
+<p>These controls operate on UVs that are already mapped onto a trim. They reposition or resize the mapped UVs without re-unwrapping anything.</p>
+<h3 id="u-axis-v-axis">U Axis / V Axis</h3>
+<p>Toggle buttons that determine which axes a Scale operation affects.</p>
+<p>Toggle one, both, or neither on before scaling to constrain the scale to horizontal only, vertical only, or both directions.</p>
+<h3 id="scale-amount">Scale amount</h3>
+<p>Numeric field containing the scale factor applied when the Scale button is pressed.</p>
+<h3 id="scale-pivot">Scale pivot</h3>
+<p>Dropdown with the following options:</p>
+<ul>
+<li>Middle</li>
+<li>Bottom-Left</li>
+<li>Bottom-Right</li>
+<li>Top-Left</li>
+<li>Top-Right</li>
+</ul>
+<p>This is the point the selected trim's UVs scale from.</p>
+<h3 id="scale">Scale</h3>
+<p>Applies the scale amount, along the enabled axes, from the chosen pivot, to the UVs currently mapped onto the selected trim.</p>
+<h3 id="move-amount">Move amount</h3>
+<p>Numeric field containing the distance moved when a Move button is pressed.</p>
+<h3 id="u-move-v-move">U Move / V Move</h3>
+<p>Nudge the mapped UVs horizontally (U) or vertically (V) by the move amount.</p>
+<h3 id="rotate-mode">Rotate Mode</h3>
+<p>Dropdown with two options:</p>
+<ul>
+<li><strong>Stay in Trim:</strong> rotates the UVs and re-fits them onto the selected trim's rectangle. In Decal Placer, this also stretches the UVs to fill the trim on both axes.</li>
+<li><strong>Standard:</strong> just rotates the UVs in place, with no trim snapping or rescaling.</li>
+</ul>
+<h3 id="rotate-90-rotate-90">Rotate -90 / Rotate 90</h3>
+<p>Rotates the selected trim's mapped UVs 90° counter-clockwise or clockwise, following whichever Rotate Mode is active.</p>
+<h3 id="flip-horizontal-flip-vertical">Flip Horizontal / Flip Vertical</h3>
+<p>Mirrors the mapped UVs left to right or top to bottom, in place.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

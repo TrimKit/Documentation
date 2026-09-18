@@ -2,6 +2,8 @@
 
 ## Blender
 
+Supported Versions: Blender 4.2 or newer.
+
 Download the TrimKit `.zip` file. Leave it zipped — Blender installs it directly, there's nothing to extract first.
 
 1. In Blender, go to **Edit > Preferences > Add-ons** (on some versions this tab is labeled **Get Extensions**).
@@ -15,6 +17,8 @@ Download the TrimKit `.zip` file. Leave it zipped — Blender installs it direct
 To change that shortcut, go to **Edit > Preferences > Keymap**, search for **TrimKit**, expand the entry under the **Window** category, and click the key combination field to record a new one.
 
 ## 3ds Max
+
+Supported Versions: 3ds Max 2022 and newer.
 
 Download the TrimKit `.mzp` file (a self-installing 3ds Max script package — don't unzip or open it, it installs itself).
 

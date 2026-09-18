@@ -1,6 +1,6 @@
 # TrimKit
 
-![TrimKit](assets/trimkit-logo.png){ width="180" }
+![TrimKit](assets/trimkit-logo-wide.png){ width="480" }
 
 Trim sheet texturing, decal placement, and edge decals for 3ds Max and Blender.
 
